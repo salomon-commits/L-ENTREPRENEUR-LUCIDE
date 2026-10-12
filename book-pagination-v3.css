@@ -1,0 +1,77 @@
+
+/* Pagination véritable : feuilles sans zones de défilement */
+.book-portal .bp-paper{overflow:hidden!important;overscroll-behavior:none;scrollbar-width:none}
+.book-portal .bp-paper::-webkit-scrollbar{display:none}
+.book-portal .bp-paper .bp-titleleaf{min-height:0; padding:18px 8px 30px}
+.book-portal .bp-paper .bp-titleleaf h1{font-size:clamp(28px,3.1vw,45px)}
+.book-portal .bp-paper .bp-kicker{margin-bottom:13px}
+.book-portal .bp-paper p,.book-portal .bp-paper li{line-height:1.72}
+.book-portal .bp-paper .case,.book-portal .bp-paper .workshop{margin:12px 0;padding:11px 14px}
+.book-portal .bp-paper h2{margin:7px 0 15px}
+.book-portal .bp-paper h3{margin:19px 0 8px}
+.book-portal .bp-spread{user-select:none;-webkit-user-select:none}
+.book-portal .bp-paper{user-select:text;-webkit-user-select:text}
+.book-portal .bp-measure{pointer-events:none!important;contain:layout style}
+.book-portal .bp-toc-flat{padding:0 0 0 4px}
+.book-portal .bp-toc-flat button{display:block;width:100%;border:0;background:transparent;color:#463023;text-align:left;font:15px/1.5 Georgia,serif;padding:3px 1px;cursor:pointer}
+.book-portal .bp-toc-subline{padding-left:18px}
+.book-portal .bp-toc-subline button{display:block;width:100%;border:0;background:transparent;color:#83654a;text-align:left;font:12px/1.36 Georgia,serif;padding:3px 2px;cursor:pointer}
+.book-portal .bp-toc-flat button:hover,.book-portal .bp-toc-subline button:hover{text-decoration:underline;color:#85592d}
+.book-portal .bp-toc-part-title{border-bottom:1px solid #bba07d77;padding-bottom:5px;font-size:19px}
+.book-portal .bp-rail-entry{padding-bottom:3px;border-bottom:1px solid #c9af8c1c}
+.book-portal .bp-rail-sub{margin-left:9px;padding:1px 3px!important;border-top:0!important}
+.book-portal .bp-rail-sub summary{font-size:11px;color:#bba989;font-weight:400}
+.book-portal .bp-rail-sub button{display:block;text-align:left;width:100%;background:none;border:0;color:#d6c4aa;font:11px/1.35 system-ui,sans-serif;padding:7px 5px}
+.book-portal .bp-rail-sub button:hover{background:#e0c08b19;border-radius:4px}
+.book-portal .bp-target-glow{animation:bp-highlight 2s ease-out}
+@keyframes bp-highlight{0%{background:#e8c07a55}100%{background:transparent}}
+/* Le coin inférieur est une vraie poignée de page, pas une simple flèche. */
+.book-portal .bp-corner{position:absolute;z-index:7;bottom:0;height:116px;width:100px;padding:0;border:0;background:transparent;color:#694d2e;touch-action:none;cursor:grab;display:block}
+.book-portal .bp-corner:active{cursor:grabbing}
+.book-portal .bp-corner:disabled{opacity:.25;cursor:default;pointer-events:none}
+.book-portal .bp-corner-right{right:0}
+.book-portal .bp-corner-left{left:0}
+.book-portal .bp-corner:before{content:"";position:absolute;bottom:0;width:65px;height:65px;background:linear-gradient(135deg,#fef7e9 1%,#dfc9a7 48%,#ac8e68 100%);box-shadow:-4px -6px 10px #5139211c,0 1px 2px #54321b2a;transition:transform .25s ease,box-shadow .25s ease}
+.book-portal .bp-corner-right:before{right:0;clip-path:polygon(100% 0,0 100%,100% 100%)}
+.book-portal .bp-corner-left:before{left:0;clip-path:polygon(0 0,0 100%,100% 100%);background:linear-gradient(225deg,#fdf3e5,#ddc59f,#b08d66)}
+.book-portal .bp-corner:hover:before{box-shadow:-5px -10px 15px #5139213c;transform:scale(1.09)}
+.book-portal .bp-corner span{position:absolute;bottom:11px;font:26px Georgia,serif;pointer-events:none;opacity:.72}
+.book-portal .bp-corner-right span{right:9px}
+.book-portal .bp-corner-left span{left:9px}
+.book-portal .bp-busy .bp-corner{pointer-events:none}
+.book-portal .bp-flip-leaf{pointer-events:none}
+.book-portal .bp-flip-face .bp-paper{height:100%;width:100%;padding:clamp(24px,3.7vw,54px) clamp(24px,3.7vw,58px) 48px}
+.book-portal .bp-cover-art{width:95%;margin-top:7px;margin-bottom:4px;flex:1}
+.book-portal .bp-cover-art svg{max-height:312px;filter:drop-shadow(0 0 12px #c7a66b0b)}
+.book-portal .bp-closed-cover{background:linear-gradient(120deg,#100f12 0%,#28202a 20%,#171820 65%,#151019 100%);box-shadow:inset 17px 0 22px #0008,inset 0 0 0 2px #cfad7255,0 12px 20px #0006}
+.book-portal .bp-closed-cover .bp-cover-inner:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 41%,#d1a46413,transparent 58%);pointer-events:none}
+.book-portal .bp-closed-cover .bp-cover-inner>*{position:relative}
+.book-portal .bp-closed-cover .bp-cover-inner h2{font-size:clamp(26px,4vw,41px)}
+.book-portal .bp-book-spine{background:linear-gradient(90deg,#0a0a0f,#413342 35%,#17131c 90%)}
+.book-portal .bp-readerbar{padding:0 2px}
+.book-portal .bp-fullscreen-button{background:#6a4c30;border-color:#d8b8839c}
+.book-portal .bp-reader:fullscreen{width:100%;height:100dvh;overflow:hidden;padding:9px 14px 8px;background:#221b16}
+.book-portal .bp-reader:fullscreen .bp-reading-layout{height:calc(100dvh - 53px)}
+.book-portal .bp-reader:fullscreen .bp-readerstage{min-height:0}
+.book-portal .bp-reader:fullscreen .bp-book-position{height:calc(100dvh - 112px)}
+.book-portal .bp-reader:fullscreen .bp-spread{height:100%;max-height:none;min-height:0}
+.book-portal .bp-reader:fullscreen .bp-rail{max-height:calc(100dvh - 59px)}
+.book-portal .bp-reader.bp-focus-mode{position:fixed!important;z-index:9999;inset:0;width:100vw;height:100dvh;overflow:hidden;background:#221b16;padding:9px 14px 8px}
+.book-portal .bp-reader.bp-focus-mode .bp-reading-layout{height:calc(100dvh - 53px)}
+.book-portal .bp-reader.bp-focus-mode .bp-readerstage{min-height:0}
+.book-portal .bp-reader.bp-focus-mode .bp-book-position{height:calc(100dvh - 112px)}
+.book-portal .bp-reader.bp-focus-mode .bp-spread{height:100%;max-height:none;min-height:0}
+body.bp-fullscreen-active{overflow:hidden!important}
+@media(max-width:770px){
+ .book-portal .bp-paper{padding:22px 26px 35px}
+ .book-portal .bp-paper .bp-titleleaf h1{font-size:32px}
+ .book-portal .bp-corner{width:65px;height:85px}
+ .book-portal .bp-corner:before{width:48px;height:48px}
+ .book-portal .bp-corner span{font-size:21px;bottom:6px}
+ .book-portal .bp-reader:fullscreen,.book-portal .bp-reader.bp-focus-mode{padding:7px 4px 10px}
+ .book-portal .bp-reader:fullscreen .bp-readerbar,.book-portal .bp-reader.bp-focus-mode .bp-readerbar{height:auto}
+ .book-portal .bp-reader:fullscreen .bp-spread,.book-portal .bp-reader.bp-focus-mode .bp-spread{height:calc(100dvh - 169px);min-height:0}
+ .book-portal .bp-reader:fullscreen .bp-book-position,.book-portal .bp-reader.bp-focus-mode .bp-book-position{height:auto}
+ .book-portal .bp-reader:fullscreen .bp-rail,.book-portal .bp-reader.bp-focus-mode .bp-rail{max-height:none}
+}
+@media print{.book-portal{display:none!important}}
