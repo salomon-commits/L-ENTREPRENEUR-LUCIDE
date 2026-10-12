@@ -224,7 +224,7 @@ function restore(){render(current)}
 function transform(dir,progress){
  const deg=(dir>0?-180:180)*progress;
  // On narrow screens, pages hinge on the same side.
- const adjusted=isMobile()&&dir<0?-deg:deg;
+ const adjusted=deg;
  return `rotateY(${adjusted}deg)`;
 }
 function finishTurn(success,toIndex,leaf,dir,fromDrag){
