@@ -86,3 +86,10 @@ body.bp-fullscreen-active{overflow:hidden!important}
 .book-portal .bp-corner-left:not(:disabled):hover{background:linear-gradient(270deg,transparent,#fff2)}
 .book-portal .bp-reader:not(:fullscreen) .bp-readerbar{min-height:44px}
 @media(max-width:770px){.book-portal .bp-corner{width:34px;height:auto}.book-portal .bp-corner:before{width:40px;height:40px}.book-portal .bp-corner span{bottom:6px}}
+
+/* Cohérence de l'animation arrière et de la typographie de la page mobile. */
+@media(max-width:770px){
+ .book-portal .bp-flip-leaf.bp-reverse{left:0;transform-origin:right center}
+ .book-portal .bp-flip-face .bp-paper{padding:22px 26px 35px}
+}
+.book-portal .bp-measure{contain:none}
