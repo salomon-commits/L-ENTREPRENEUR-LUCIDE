@@ -75,3 +75,14 @@ body.bp-fullscreen-active{overflow:hidden!important}
  .book-portal .bp-reader:fullscreen .bp-rail,.book-portal .bp-reader.bp-focus-mode .bp-rail{max-height:none}
 }
 @media print{.book-portal{display:none!important}}
+
+/* Une prise continue sur toute la bordure extérieure, avec un coin visible. */
+.book-portal .bp-corner{top:0;bottom:0;height:auto;width:48px}
+.book-portal .bp-corner:before{bottom:0}
+.book-portal .bp-corner span{bottom:12px}
+.book-portal .bp-corner-right{border-right:3px solid #c49d6255}
+.book-portal .bp-corner-left{border-left:3px solid #c49d6255}
+.book-portal .bp-corner:not(:disabled):hover{background:linear-gradient(90deg,transparent,#fff2)}
+.book-portal .bp-corner-left:not(:disabled):hover{background:linear-gradient(270deg,transparent,#fff2)}
+.book-portal .bp-reader:not(:fullscreen) .bp-readerbar{min-height:44px}
+@media(max-width:770px){.book-portal .bp-corner{width:34px;height:auto}.book-portal .bp-corner:before{width:40px;height:40px}.book-portal .bp-corner span{bottom:6px}}
